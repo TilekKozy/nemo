@@ -1,0 +1,42 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Документация к API",
+        "version": "1.0"
+    },
+    "paths": {
+        "/api/airports": {
+            "get": {
+                "tags": [
+                    "Airports"
+                ],
+                "summary": "Получить аэропорты по поисковому запросу",
+                "operationId": "71e06824186eeb531dd8cfdbc3b7bc91",
+                "parameters": [
+                    {
+                        "name": "search",
+                        "in": "query",
+                        "description": "Поисковый запрос для фильтрации аэропортов",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Список аэропортов, соответствующих поисковому запросу",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "ошибка валидации"
+                    }
+                }
+            }
+        }
+    }
+}
