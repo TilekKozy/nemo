@@ -9,10 +9,5 @@ interface AirportInterface
 {
     public function getSearchColumns(): array;
 
-    /**
-     * @param SearchData $searchData
-     *
-     * @return Collection
-     */
     public function getByName(SearchData $searchData): Collection;
 }
