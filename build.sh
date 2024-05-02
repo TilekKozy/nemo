@@ -7,7 +7,7 @@ docker run --rm -v $(pwd):/app prooph/composer:8.2 install
 cp .env.example .env
 
 # Запуск контейнеров Docker
-docker-compose up -d
+docker-compose up -d --build
 
 # Генерация ключа приложения
 docker-compose exec app php artisan key:generate
